@@ -16,7 +16,10 @@ const CVPreview = forwardRef(({ data }, ref) => {
       }}
     >
       {/* Header Section */}
-      <div className="border-b-4 border-cv-primary-600 pb-6 mb-6">
+      <div
+        className="border-b-4 border-cv-primary-600 pb-6 mb-6"
+        style={{ pageBreakInside: 'avoid' }}
+      >
         <div className="flex items-start gap-6">
           {personalInfo.photo && (
             <img
@@ -70,7 +73,7 @@ const CVPreview = forwardRef(({ data }, ref) => {
 
       {/* Summary Section */}
       {personalInfo.summary && (
-        <div className="mb-6">
+        <div className="mb-6" style={{ pageBreakInside: 'avoid' }}>
           <h2 className="text-xl font-bold text-cv-text-main mb-3 pb-2 border-b-2 border-cv-primary-100">
             Perfil Profesional
           </h2>
@@ -92,6 +95,7 @@ const CVPreview = forwardRef(({ data }, ref) => {
                   <div
                     key={exp.id}
                     className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-cv-primary-600 before:rounded-full"
+                    style={{ pageBreakInside: 'avoid' }}
                   >
                     <div className="flex justify-between items-baseline mb-1">
                       <h3 className="text-base font-semibold text-cv-text-main">
@@ -136,6 +140,7 @@ const CVPreview = forwardRef(({ data }, ref) => {
                   <div
                     key={edu.id}
                     className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-cv-primary-600 before:rounded-full"
+                    style={{ pageBreakInside: 'avoid' }}
                   >
                     <div className="flex justify-between items-baseline mb-1">
                       <h3 className="text-base font-semibold text-cv-text-main">
@@ -166,7 +171,7 @@ const CVPreview = forwardRef(({ data }, ref) => {
 
       {/* Skills Section */}
       {skills.length > 0 && (
-        <div className="mb-6">
+        <div className="mb-6" style={{ pageBreakInside: 'avoid' }}>
           <h2 className="text-xl font-bold text-cv-text-main mb-3 pb-2 border-b-2 border-cv-primary-100 flex items-center gap-2">
             <Code className="w-5 h-5 text-cv-primary-600" />
             Habilidades Técnicas

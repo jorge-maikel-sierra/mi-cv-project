@@ -11,11 +11,27 @@ import { initialData } from './data/initialData';
 function App() {
   const [cvData, setCvData] = useState(initialData);
   const [openSection, setOpenSection] = useState('personal');
-  const cvRef = useRef(null);
+  const componentRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => cvRef.current,
+    contentRef: componentRef,
     documentTitle: `CV_${cvData.personalInfo.fullName.replace(/\s+/g, '_') || 'Mi_CV'}`,
+    pageStyle: `
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          color-adjust: exact;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    `,
   });
 
   const toggleSection = (section) => {
@@ -142,7 +158,7 @@ function App() {
           <div className="lg:sticky lg:top-8 h-fit">
             <h2 className="text-lg font-semibold text-cv-text-main mb-4">Vista Previa</h2>
             <div className="bg-cv-bg-warm p-4 rounded-lg shadow-xl overflow-auto max-h-[calc(100vh-12rem)]">
-              <CVPreview ref={cvRef} data={cvData} />
+              <CVPreview ref={componentRef} data={cvData} />
             </div>
           </div>
         </div>

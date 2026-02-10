@@ -59,3 +59,77 @@
     color-adjust: exact;
   }
 }
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-exact {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Asegurar que los colores de texto se impriman correctamente */
+  .text-cv-text-main,
+  h1,
+  h2,
+  h3 {
+    color: #2e1a12 !important;
+  }
+
+  .text-cv-text-secondary,
+  .text-cv-text-secondary span {
+    color: #5e3a2a !important;
+  }
+
+  .text-cv-primary-600 {
+    color: #9c4a2f !important;
+  }
+
+  .text-cv-primary-700 {
+    color: #8a4229 !important;
+  }
+
+  /* Asegurar que los iconos tengan color */
+  svg {
+    color: #9c4a2f !important;
+  }
+
+  /* Asegurar que los bordes se impriman */
+  .border-cv-primary-600 {
+    border-color: #9c4a2f !important;
+  }
+
+  .border-cv-primary-100 {
+    border-color: #e8d0b3 !important;
+  }
+
+  .border-cv-primary-200 {
+    border-color: #d4b89e !important;
+  }
+
+  .border-cv-primary-300 {
+    border-color: #c0a089 !important;
+  }
+
+  /* Asegurar que los fondos se impriman */
+  .bg-cv-primary-50 {
+    background-color: #f9f0e8 !important;
+  }
+
+  .before\:bg-cv-primary-600::before {
+    background-color: #9c4a2f !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
