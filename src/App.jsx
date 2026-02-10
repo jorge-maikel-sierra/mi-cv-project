@@ -70,20 +70,22 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-cv-bg-lighter to-cv-bg-light">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
+      <header className="bg-white shadow-sm border-b-2 border-cv-primary-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Generador de CV Profesional</h1>
-              <p className="text-sm text-gray-600 mt-1">
+              <h1 className="text-2xl font-bold text-cv-primary-600">
+                Generador de CV Profesional
+              </h1>
+              <p className="text-sm text-cv-text-secondary mt-1">
                 Crea tu currículum de forma rápida y profesional
               </p>
             </div>
             <button
               onClick={handlePrint}
-              className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2 shadow-md hover:shadow-lg"
+              className="bg-cv-primary-500 text-white px-6 py-3 rounded-lg hover:bg-cv-primary-600 transition-colors flex items-center gap-2 shadow-md hover:shadow-lg font-medium"
             >
               <Download className="w-5 h-5" />
               Descargar PDF
@@ -97,7 +99,7 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Panel - Forms */}
           <div className="space-y-4">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Editar Información</h2>
+            <h2 className="text-lg font-semibold text-cv-text-main mb-4">Editar Información</h2>
             {sections.map((section) => {
               const Icon = section.icon;
               const isOpen = openSection === section.id;
@@ -105,21 +107,21 @@ function App() {
               return (
                 <div
                   key={section.id}
-                  className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+                  className="bg-white rounded-lg shadow-md overflow-hidden border border-cv-primary-100"
                 >
                   {/* Section Header */}
                   <button
                     onClick={() => toggleSection(section.id)}
-                    className="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 transition-colors"
+                    className="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-white to-cv-bg-lighter hover:from-cv-bg-lighter hover:to-cv-bg-light transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary-100 rounded-lg">
-                        <Icon className="w-5 h-5 text-primary-600" />
+                      <div className="p-2 bg-cv-primary-100 rounded-lg">
+                        <Icon className="w-5 h-5 text-cv-primary-600" />
                       </div>
-                      <span className="font-semibold text-gray-900">{section.title}</span>
+                      <span className="font-semibold text-cv-text-main">{section.title}</span>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-gray-500 transition-transform ${
+                      className={`w-5 h-5 text-cv-text-secondary transition-transform ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -127,7 +129,9 @@ function App() {
 
                   {/* Section Content */}
                   {isOpen && (
-                    <div className="px-6 py-4 border-t border-gray-100">{section.component}</div>
+                    <div className="px-6 py-4 border-t border-cv-primary-50">
+                      {section.component}
+                    </div>
                   )}
                 </div>
               );
@@ -136,8 +140,8 @@ function App() {
 
           {/* Right Panel - CV Preview */}
           <div className="lg:sticky lg:top-8 h-fit">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Vista Previa</h2>
-            <div className="bg-gray-200 p-4 rounded-lg shadow-xl overflow-auto max-h-[calc(100vh-12rem)]">
+            <h2 className="text-lg font-semibold text-cv-text-main mb-4">Vista Previa</h2>
+            <div className="bg-cv-bg-warm p-4 rounded-lg shadow-xl overflow-auto max-h-[calc(100vh-12rem)]">
               <CVPreview ref={cvRef} data={cvData} />
             </div>
           </div>

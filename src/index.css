@@ -1,5 +1,57 @@
 @import 'tailwindcss';
 
+@theme {
+  /* Paleta de colores cálidos inspirados en tonos terrosos */
+  --color-cv-primary-50: #faf0ed;
+  --color-cv-primary-100: #f4ded6;
+  --color-cv-primary-200: #e9bdad;
+  --color-cv-primary-300: #de9b84;
+  --color-cv-primary-400: #c86d51;
+  --color-cv-primary-500: #9c4a2f;
+  --color-cv-primary-600: #7d3b26;
+  --color-cv-primary-700: #5e2c1c;
+  --color-cv-primary-800: #3f1e13;
+  --color-cv-primary-900: #200f09;
+
+  --color-cv-secondary-50: #f9f1ed;
+  --color-cv-secondary-100: #f2e3db;
+  --color-cv-secondary-200: #e5c7b7;
+  --color-cv-secondary-300: #d8ab93;
+  --color-cv-secondary-400: #c5936f;
+  --color-cv-secondary-500: #b87a5e;
+  --color-cv-secondary-600: #93624b;
+  --color-cv-secondary-700: #6e4938;
+  --color-cv-secondary-800: #4a3126;
+  --color-cv-secondary-900: #251813;
+
+  --color-cv-bg-light: #e8d0b3;
+  --color-cv-bg-lighter: #f5ead9;
+  --color-cv-bg-warm: #dfc4a3;
+  --color-cv-bg-dark: #5e3a2a;
+  --color-cv-bg-darker: #3d2519;
+
+  --color-cv-text-main: #2e1a12;
+  --color-cv-text-secondary: #5e3a2a;
+  --color-cv-text-light: #7d5b4a;
+  --color-cv-text-lighter: #9c7a66;
+
+  --color-cv-accent-warm: #d4976c;
+  --color-cv-accent-terracotta: #9c4a2f;
+  --color-cv-accent-cream: #f5ead9;
+
+  /* Alias para compatibilidad */
+  --color-primary-50: #faf0ed;
+  --color-primary-100: #f4ded6;
+  --color-primary-200: #e9bdad;
+  --color-primary-300: #de9b84;
+  --color-primary-400: #c86d51;
+  --color-primary-500: #9c4a2f;
+  --color-primary-600: #7d3b26;
+  --color-primary-700: #5e2c1c;
+  --color-primary-800: #3f1e13;
+  --color-primary-900: #200f09;
+}
+
 @layer utilities {
   .print-exact {
     -webkit-print-color-adjust: exact;

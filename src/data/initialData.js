@@ -1,22 +1,22 @@
 export const initialData = {
   personalInfo: {
-    fullName: 'Ana García Rodríguez',
-    jobTitle: 'Desarrolladora Full Stack Senior',
-    email: 'ana.garcia@email.com',
-    phone: '+34 612 345 678',
-    location: 'Madrid, España',
-    website: 'www.anagarcia.dev',
-    linkedin: 'linkedin.com/in/anagarcia',
+    fullName: 'Jorge Maikel Sierra',
+    jobTitle: 'Desarrollador Full Stack Senior',
+    email: 'jorgemaikelsierraamaya@gmail.com',
+    phone: '+57 318 759 2617',
+    location: 'Riohacha, La Guajira, Colombia',
+    website: 'www.jorgemaikelsierra.dev',
+    linkedin: 'https://www.linkedin.com/in/jorgemaikelsierra/',
     summary:
-      'Desarrolladora Full Stack con más de 5 años de experiencia en la creación de aplicaciones web escalables y eficientes. Especializada en React, Node.js y arquitecturas cloud. Apasionada por escribir código limpio y mantener las mejores prácticas de desarrollo.',
+      'Desarrollador Full Stack con más de 5 años de experiencia en la creación de aplicaciones web escalables y eficientes. Especializado en React, Node.js y arquitecturas cloud. Apasionado por escribir código limpio y mantener las mejores prácticas de desarrollo.',
     photo: null,
   },
   education: [
     {
       id: crypto.randomUUID(),
-      institution: 'Universidad Politécnica de Madrid',
+      institution: 'Universidad De La Guajira',
       degree: 'Grado en Ingeniería Informática',
-      location: 'Madrid, España',
+      location: 'Riohacha, La Guajira, Colombia',
       startDate: '2015',
       endDate: '2019',
       description: 'Especialización en Ingeniería del Software y Sistemas de Información.',

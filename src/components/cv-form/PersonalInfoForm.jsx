@@ -44,7 +44,7 @@ export default function PersonalInfoForm({ data, onChange }) {
   return (
     <div className="space-y-4">
       {/* Foto de perfil */}
-      <div className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-lg">
+      <div className="flex flex-col items-center gap-4 p-4 bg-cv-bg-lighter rounded-lg border border-cv-primary-100">
         {data.photo ? (
           <div className="relative">
             <img
@@ -69,11 +69,11 @@ export default function PersonalInfoForm({ data, onChange }) {
             </button>
           </div>
         ) : (
-          <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center">
-            <Camera className="w-12 h-12 text-gray-400" />
+          <div className="w-32 h-32 rounded-full bg-cv-bg-light flex items-center justify-center border-2 border-cv-primary-200">
+            <Camera className="w-12 h-12 text-cv-primary-400" />
           </div>
         )}
-        <label className="cursor-pointer bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2">
+        <label className="cursor-pointer bg-cv-primary-500 text-white px-4 py-2 rounded-lg hover:bg-cv-primary-600 transition-colors flex items-center gap-2 font-medium shadow-sm">
           <Camera className="w-4 h-4" />
           {data.photo ? 'Cambiar foto' : 'Cargar foto'}
           <input
@@ -84,14 +84,14 @@ export default function PersonalInfoForm({ data, onChange }) {
             className="hidden"
           />
         </label>
-        <p className="text-xs text-gray-500">Máx 5MB - JPG, PNG o GIF</p>
+        <p className="text-xs text-cv-text-secondary">Máx 5MB - JPG, PNG o GIF</p>
       </div>
 
       {/* Información personal */}
       <div className="grid grid-cols-1 gap-4">
         <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-            <User className="w-4 h-4" />
+          <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+            <User className="w-4 h-4 text-cv-primary-500" />
             Nombre completo
           </label>
           <input
@@ -99,14 +99,14 @@ export default function PersonalInfoForm({ data, onChange }) {
             name="fullName"
             value={data.fullName}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
             placeholder="Ej: Ana García Rodríguez"
           />
         </div>
 
         <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-            <FileText className="w-4 h-4" />
+          <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+            <FileText className="w-4 h-4 text-cv-primary-500" />
             Título profesional
           </label>
           <input
@@ -114,15 +114,15 @@ export default function PersonalInfoForm({ data, onChange }) {
             name="jobTitle"
             value={data.jobTitle}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
             placeholder="Ej: Desarrolladora Full Stack Senior"
           />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-              <Mail className="w-4 h-4" />
+            <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+              <Mail className="w-4 h-4 text-cv-primary-500" />
               Email
             </label>
             <input
@@ -130,14 +130,14 @@ export default function PersonalInfoForm({ data, onChange }) {
               name="email"
               value={data.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
               placeholder="tu@email.com"
             />
           </div>
 
           <div>
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-              <Phone className="w-4 h-4" />
+            <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+              <Phone className="w-4 h-4 text-cv-primary-500" />
               Teléfono
             </label>
             <input
@@ -145,7 +145,7 @@ export default function PersonalInfoForm({ data, onChange }) {
               name="phone"
               value={data.phone}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
               placeholder="+34 612 345 678"
             />
           </div>
@@ -153,8 +153,8 @@ export default function PersonalInfoForm({ data, onChange }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-              <MapPin className="w-4 h-4" />
+            <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+              <MapPin className="w-4 h-4 text-cv-primary-500" />
               Ubicación
             </label>
             <input
@@ -162,14 +162,14 @@ export default function PersonalInfoForm({ data, onChange }) {
               name="location"
               value={data.location}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
               placeholder="Madrid, España"
             />
           </div>
 
           <div>
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-              <Globe className="w-4 h-4" />
+            <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+              <Globe className="w-4 h-4 text-cv-primary-500" />
               Sitio web
             </label>
             <input
@@ -177,15 +177,15 @@ export default function PersonalInfoForm({ data, onChange }) {
               name="website"
               value={data.website}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
               placeholder="www.tuportfolio.com"
             />
           </div>
         </div>
 
         <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-            <Linkedin className="w-4 h-4" />
+          <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+            <Linkedin className="w-4 h-4 text-cv-primary-500" />
             LinkedIn
           </label>
           <input
@@ -193,14 +193,14 @@ export default function PersonalInfoForm({ data, onChange }) {
             name="linkedin"
             value={data.linkedin}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
             placeholder="linkedin.com/in/tuperfil"
           />
         </div>
 
         <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
-            <FileText className="w-4 h-4" />
+          <label className="flex items-center gap-2 text-sm font-medium text-cv-text-main mb-1">
+            <FileText className="w-4 h-4 text-cv-primary-500" />
             Resumen profesional
           </label>
           <textarea
@@ -208,7 +208,7 @@ export default function PersonalInfoForm({ data, onChange }) {
             value={data.summary}
             onChange={handleChange}
             rows={4}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
+            className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all resize-none"
             placeholder="Describe brevemente tu experiencia y objetivos profesionales..."
           />
         </div>

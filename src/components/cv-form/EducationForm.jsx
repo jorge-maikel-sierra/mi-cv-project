@@ -25,10 +25,13 @@ export default function EducationForm({ data, onChange }) {
   return (
     <div className="space-y-4">
       {data.map((edu, index) => (
-        <div key={edu.id} className="p-4 border border-gray-200 rounded-lg bg-white space-y-4">
+        <div
+          key={edu.id}
+          className="p-4 border border-cv-primary-100 rounded-lg bg-white space-y-4"
+        >
           <div className="flex justify-between items-center">
-            <h4 className="font-medium text-gray-700 flex items-center gap-2">
-              <GraduationCap className="w-5 h-5" />
+            <h4 className="font-medium text-cv-text-main flex items-center gap-2">
+              <GraduationCap className="w-5 h-5 text-cv-primary-500" />
               Educación {index + 1}
             </h4>
             {data.length > 1 && (
@@ -45,70 +48,78 @@ export default function EducationForm({ data, onChange }) {
 
           <div className="grid grid-cols-1 gap-4">
             <div>
-              <label className="text-sm font-medium text-gray-700 mb-1 block">Institución</label>
+              <label className="text-sm font-medium text-cv-text-main mb-1 block">
+                Institución
+              </label>
               <input
                 type="text"
                 value={edu.institution}
                 onChange={(e) => updateEducation(edu.id, 'institution', e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
                 placeholder="Universidad Politécnica de Madrid"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700 mb-1 block">Título / Grado</label>
+              <label className="text-sm font-medium text-cv-text-main mb-1 block">
+                Título / Grado
+              </label>
               <input
                 type="text"
                 value={edu.degree}
                 onChange={(e) => updateEducation(edu.id, 'degree', e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
                 placeholder="Grado en Ingeniería Informática"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700 mb-1 block">Ubicación</label>
+              <label className="text-sm font-medium text-cv-text-main mb-1 block">Ubicación</label>
               <input
                 type="text"
                 value={edu.location}
                 onChange={(e) => updateEducation(edu.id, 'location', e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
                 placeholder="Madrid, España"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-gray-700 mb-1 block">Fecha inicio</label>
+                <label className="text-sm font-medium text-cv-text-main mb-1 block">
+                  Fecha inicio
+                </label>
                 <input
                   type="text"
                   value={edu.startDate}
                   onChange={(e) => updateEducation(edu.id, 'startDate', e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
                   placeholder="2015"
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-gray-700 mb-1 block">Fecha fin</label>
+                <label className="text-sm font-medium text-cv-text-main mb-1 block">
+                  Fecha fin
+                </label>
                 <input
                   type="text"
                   value={edu.endDate}
                   onChange={(e) => updateEducation(edu.id, 'endDate', e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all"
                   placeholder="2019"
                 />
               </div>
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-700 mb-1 block">
+              <label className="text-sm font-medium text-cv-text-main mb-1 block">
                 Descripción (opcional)
               </label>
               <textarea
                 value={edu.description}
                 onChange={(e) => updateEducation(edu.id, 'description', e.target.value)}
                 rows={3}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
+                className="w-full px-4 py-2 border border-cv-primary-200 rounded-lg focus:ring-2 focus:ring-cv-primary-500 focus:border-transparent outline-none transition-all resize-none"
                 placeholder="Especialización, logros, honores..."
               />
             </div>
@@ -119,7 +130,7 @@ export default function EducationForm({ data, onChange }) {
       <button
         type="button"
         onClick={addEducation}
-        className="w-full py-3 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-primary-500 hover:text-primary-500 transition-colors flex items-center justify-center gap-2"
+        className="w-full py-3 border-2 border-dashed border-cv-primary-200 rounded-lg text-cv-primary-600 hover:border-cv-primary-500 hover:text-cv-primary-700 hover:bg-cv-bg-lighter transition-colors flex items-center justify-center gap-2 font-medium"
       >
         <Plus className="w-5 h-5" />
         Agregar educación
