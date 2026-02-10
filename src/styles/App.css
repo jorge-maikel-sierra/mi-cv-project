@@ -15,8 +15,14 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
-h3 { margin-top: 0; color: #444; }
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+h3 {
+  margin-top: 0;
+  color: #444;
+}
 
 .form-group {
   display: flex;
@@ -25,14 +31,18 @@ h3 { margin-top: 0; color: #444; }
   margin-bottom: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
 }
 
-textarea { resize: vertical; min-height: 80px; }
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
 
 button {
   padding: 10px 20px;
@@ -45,8 +55,18 @@ button {
   width: fit-content;
 }
 
-button:hover { background-color: #0056b3;}
-button:edit-btn { background-color: #6c757d; margin-top: 10px; }
+button:hover {
+  background-color: #0056b3;
+}
+button:edit-btn {
+  background-color: #6c757d;
+  margin-top: 10px;
+}
 
-.data-row { margin-bottom: 0.5rem; }
-.label { font-weight: bold; margin-right: 0.5rem;}
+.data-row {
+  margin-bottom: 0.5rem;
+}
+.label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
