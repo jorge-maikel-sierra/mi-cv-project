@@ -89,22 +89,23 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-cv-bg-lighter to-cv-bg-light">
       {/* Header */}
       <header className="bg-white shadow-sm border-b-2 border-cv-primary-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-cv-primary-600">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
+            <div className="flex-1 min-w-0">
+              <h1 className="text-xl sm:text-2xl font-bold text-cv-primary-600 truncate">
                 Generador de CV Profesional
               </h1>
-              <p className="text-sm text-cv-text-secondary mt-1">
+              <p className="text-xs sm:text-sm text-cv-text-secondary mt-1 hidden sm:block">
                 Crea tu currículum de forma rápida y profesional
               </p>
             </div>
             <button
               onClick={handlePrint}
-              className="bg-cv-primary-500 text-white px-6 py-3 rounded-lg hover:bg-cv-primary-600 transition-colors flex items-center gap-2 shadow-md hover:shadow-lg font-medium"
+              className="bg-cv-primary-500 text-white px-3 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-cv-primary-600 transition-colors flex items-center gap-1 sm:gap-2 shadow-md hover:shadow-lg font-medium text-sm sm:text-base whitespace-nowrap flex-shrink-0"
             >
-              <Download className="w-5 h-5" />
-              Descargar PDF
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden xs:inline sm:inline">Descargar PDF</span>
+              <span className="inline xs:hidden sm:hidden">PDF</span>
             </button>
           </div>
         </div>
